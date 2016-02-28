@@ -1,0 +1,156 @@
+.titulo {
+    text-align: center;
+    font-family: Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
+}
+
+.div_alinhada {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 2px;
+}
+
+.div_comum {
+    width: 100px;
+    height: 100px;
+    margin: 3px;
+}
+
+.div_block {
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	display: block;
+    margin: 3px;
+}
+
+.div_inline_block {
+    height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.div_inline {
+    height: 50px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline;
+}
+
+.div_none {
+    height: 50px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: none;
+}
+
+.bloco_codigo {
+    border: 2px solid #006666; 
+    padding: 5px 0px 5px 5px; 
+    max-width: 250px;
+    margin: 5px 0px 5px 0px;
+}
+
+body {
+    margin-left: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+#div_relative {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 4px dashed orange;
+}
+
+#div_absolute {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 4px solid purple;
+    margin-top: 3px;
+}
+
+#borda_grossa {
+    border-width: 15px;
+    border-style: solid;
+}
+
+#div_margin {
+    border: 2px dashed blue;
+    margin: 10px;
+}
+
+#div_padding {
+    border: 2px dashed red;
+    padding: 10px;
+}
+
+#borda_fina {
+    border-width: 3px;
+    border-style: solid;
+}
+
+#div_alinhada_dashed {
+    border-style: dashed;
+}
+
+#div_alinhada_solid {
+    border-style: solid;
+}
+
+#back_color {
+    width: 200px;
+    height: 60px;
+    background-color: #2A4DEE;
+    margin-bottom: 10px;
+}
+
+#back_pic {
+    display: table;
+    background-image: url("pinguim.jpg");
+    width: 336px;
+    height: 437px;
+}
+
+#back_pic_p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#div_centralizada {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+#indice{
+    border: 2px solid black; 
+    width: 300px; 
+    height: 235px; 
+    position: fixed; 
+    right: 0px; 
+    background-color: #a6ff4d;
+}
+
+#titulo_indice  {
+    border: 2px solid black; 
+    width: 300px; 
+    height: 40px; 
+    position: fixed; 
+    right: 0px; 
+    top: 80px; 
+    text-align: center; 
+    display: table; 
+    background-color: #ff8533;
+}

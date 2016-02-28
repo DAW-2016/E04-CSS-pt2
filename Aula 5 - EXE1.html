@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>EXE1</title>
+        <link type="text/css" rel="stylesheet" href="stylesheet.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+            <script type="text/javascript">// <![CDATA[
+            $(document).ready(function() {
+                function filterPath(string) {
+                    return string
+                    .replace(/^\//,'')
+                    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+                    .replace(/\/$/,'');
+                }
+                $('a[href*=#]').each(function() {
+                    if ( filterPath(location.pathname) == filterPath(this.pathname)
+                    && location.hostname == this.hostname
+                    && this.hash.replace(/#/,'') ) {
+                        var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+                        var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+                        if ($target) {
+                            var targetOffset = $target.offset().top;
+                            $(this).click(function() {
+                                $('html, body').animate({scrollTop: targetOffset}, 1000);
+                                return false;
+                            });
+                        }
+                    }
+                });
+            });
+                </script>
+    </head>
+    <body style="margin-right: 320px">
+        <h1 class="titulo" style="margin-left: 300px"><a name="Topo"/>Propriedades CSS</h1>
+        <h4 class="titulo" style="margin-left: 300px">Entenda como funciona e suas funções</h4>
+            
+            <div id="titulo_indice">
+                <h3 id="back_pic_p">Índice</h3>
+            </div>
+            <div id="indice">
+                
+                <ul>
+                    <li><a href="#Topo">Topo</a></li>
+                    <li><a href="#Background">Background</a></li>
+                    <li><a href="#Fontes">Fontes</a></li>
+                    <li><a href="#Bordas">Bordas</a></li>
+                    <li><a href="#MeP">Margem e padding</a></li> <!--MeP: Margem e padding-->
+                    <li><a href="#Cores">Cores</a></li>
+                    <li><a href="#Dimensão">Dimensão</a></li>
+                    <li><a href="#Posicionamento">Posicionamento</a></li>
+                    <li><a href="#Seletores">Seletores</a></li>
+                    <li><a href="#Box-Model">Box-Model</a></li>
+                    <li><a href="#bibliografica">Créditos</a></li>
+                </ul>
+            </div>
+
+            <p>O CSS é uma solução para separação da estrutura (HTML) e estilo (CSS) de uma página web. Alguns dos benefícios de aliar o CSS ao seu HTML são:</p>
+            <ul>
+                <li style="color: #40DF7A">Sintaxe simplificada</li>
+                <li style="color: #49AFF9">Modularização</li>
+                <li style="color: #FF8000">Facilidade de manutenção</li>
+            </ul>
+            <p>Vamos mostrar algumas propriedades do CSS, dizendo o que elas fazem e dando exemplos. Caso esteja a procura de algo específico, consulte o índice ao lado.</p>
+
+            <a name="Background"/><h3>Background</h3>
+                <ul>
+                    <li>background-color</li>
+                    <div id="back_color">
+                        <p style:"text-align: justify">Com essa propriedade podemos colocar uma cor no fundo do texto</p>
+                    </div>
+                    <li>background-image</li>
+                    <div id="back_pic">
+                        <p id="back_pic_p" style="color: #ff6600; font-size: 20px"><strong>Dessa vez usamos uma foto no fundo!<strong></p>
+                    </div>
+                </ul>
+
+            <a name="Fontes"/><h3>Fontes</h3>
+                <ul>
+                    <li>font-size</li>
+                        <p>Com o font-size mudamos o tamanho da fonte.</p>
+                            <p>
+                                <spam style="font-size:15px">Pequeno</spam> <spam style="font-size:30px">Médio</spam>
+                                <spam style="font-size:50px">Grande</spam>
+                            </p>
+                    <li>font-family</li>
+                        <p>Com o font-family mudamos a família da fonte do nosso texto.</p>
+                            <p style="font-family: Courier">Courier</p>
+                            <p style="font-family: Arial">Arial</p>
+                            <p style="font-family: Calibri">Calibri</p>
+                    <li>font-style</li>
+                        <p>Com o font-style conseguimos mudar o texto para itálico, por exemplo</p>
+                            <p style="font-style: italic">Itálico</p>
+                </ul>
+            
+            <a name="Bordas"/><h3>Bordas</h3>
+                <ul>
+                    <li>border-style</li>
+                        <p>O border-style muda o tipo de borda, como por exemplo "sólida" ou "tracejada"</p>
+                            <div id="div_alinhada_solid" class="div_alinhada"></div>
+                            <div id="div_alinhada_dashed" class="div_alinhada"></div>
+                    <li>border-width</li>
+                        <p>O border-width muda a espessura da borda. ATENÇÃO! Essa propriedade não funciona sozinha.</p>
+                        <div id="borda_grossa" class="div_alinhada"></div>
+                        <div id="borda_fina" class="div_alinhada"></div>
+                </ul>
+
+            <a name="MeP"/><h3>Margem e padding</h3>
+                <ul>
+                    <li>margin</li>
+                        <p>A propriedade margin é usada para gerar espaço branco ao redor dos elementos. Essa propriedade define o tamanho do espaço branco fora da borda.
+                        <div id="div_margin" class="div_comum"></div>
+                    <li>padding</li>
+                        <p>Essa propriedade é usada para gerar espaço em volta do conteúdo. O padding define o tamanho do espaço branco entre o elemento do conteúdo e o elemento da borda</p>
+                        <div id="div_padding" class="div_comum"></div>
+                </ul>
+
+            <a name="Cores"/><h3>Cores</h3>
+                <ul>
+                    <li>color</li>
+                        <p style="color: red">Podemos mudar a cor do texto, por exemplo.</p>
+                    <li>opacity</li>
+                        <p>Podemos mudar a opacidade de uma div, por exemplo.</p>
+                        <div class="div_alinhada" style="background-color: green"></div>
+                        <div class="div_alinhada" style="opacity: 0.3; background-color: green"></div>
+                </ul>
+
+            <a name="Dimensão"/><h3>Dimensão</h3>
+                <ul>
+                    <li>height</li>
+                        <p>Define a altura do elemento</p>
+                        <div style="height: 100px; background-color:yellow"></div>
+                    <li>width</li>
+                        <p>Define a largura do elemento</p>
+                        <div class="div_comum" style="background-color: yellow"></div>
+                    <li>max-height</li>
+                        <p>Define a altura máxima do elemento</p>
+                        <p style="max-height: 50px; background-color: lightblue; overflow: auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <li>max-width</li>
+                        <p>Define a largura máxima do elemento</p>
+                        <p style="max-width: 100px; background-color: lightblue">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </ul>
+
+            <a name="Posicionamento"/><h3>Posicionamento</h3>
+                <ul>
+                    <li>position</li>
+                        <p>Especifica o tipo de posicionamento usado para um elemento</p>
+                        <div class="div_comum" style="position: static; border: 2px dashed pink"></div>
+                        <p>Neste caso usamos o position <em>static</em>, o qual se adequa ao fluxo da página e não é afetado pelas propriedades <em>top</em>, <em>right</em>, <em>bottom</em> e <em>left</em>.
+                        <p>Um outro exemplo de uso do position é o nosso próprio índice da página, o qual usa contém o atributo <em>fixed</em>, que obviamente o mantém fixo na sua posição independemente de em qual parte da página estamos</p>
+                    <li>float</li>
+                        <p>Imagine a página HTML como um mar, onde as divs são embarcações que navegam de um lado para outro, dependendo do seu interesse. A propriedade float define se um elemento deve se posicionar na parte esquerda ou direita da página, por exemplo</p>
+                        <div class="div_comum" style="border: 5px solid blue; float: right; display: table"><p id="back_pic_p">DIREITA</p></div>
+                        <div class="div_comum" style="border: 5px solid green; float: left; display: table"><p id="back_pic_p">ESQUERDA</p></div>
+                    <li style="clear: both">left</li>
+                        <p>Para elementos posicionados absolutamente, a propriedade left define a margem esquerda de um elemento de uma unidade para a esquerda / direita da borda esquerda do seu ancestral posicionado mais próximo</p>
+                        <div id="div_relative">
+                            <div id="div_absolute" style="left: 50px"></div>
+                        </div>
+                    <li>right</li>
+                        <p>O mesmo acontece com a propriedade right, mas com a lógica reversa. Veja:</p>
+                        <div id="div_relative">
+                            <div id="div_absolute" style="right: 50px"></div>
+                        </div>
+                    <li>center</li>
+                        <p>Para posicionar um elemento no centro, você deve usar a propriedade <em>margin</em> e o atributo <em>auto</em>. Simples assim!</p>
+                        <div id="div_centralizada" style="display: table">
+                            <p id="back_pic_p">Parágrafo centralizado na página</p>
+                        </div>
+                    <li>display</li>
+                        <p>A propriedade <em>display</em> especifica o tipo de box usada para um elemento HTML
+                        <ul>
+                            <li>block</li>
+                            <div class="div_block" style="background-color: red"></div>
+                            <div class="div_block" style="background-color: yellow"></div>
+                            <div class="div_block" style="background-color: blue"></div>
+                            <div class="div_block" style="background-color: green"></div>
+
+                            <li>inline-block</li>
+                            <div class="div_inline_block" style="background-color: red"></div>
+                            <div class="div_inline_block" style="background-color: yellow"></div>
+                            <div class="div_inline_block" style="background-color: blue"></div>
+                            <div class="div_inline_block" style="background-color: green"></div>
+
+                            <li>inline</li>
+                            <div class="div_inline" style="background-color: red"></div>
+                            <div class="div_inline" style="background-color: yellow"></div>
+                            <div class="div_inline" style="background-color: blue"></div>
+                            <div class="div_inline" style="background-color: green"></div>
+
+                            <li>none</li>
+                            <div class="div_none" style="background-color: red"></div>
+                            <div class="div_none" style="background-color: yellow"></div>
+                            <div class="div_none" style="background-color: blue"></div>
+                            <div class="div_none" style="background-color: green"></div>
+                            <p>Como você pode "ver", as divs sumiram!</p>
+                        </ul>
+                </ul>
+            <a name="Seletores"><h3>Seletores</h3>
+                <p>Toda tag HTML que usamos é também um seletor, o qual pode ser estilizado com o uso do CSS. Existem várias formas de escolher quais e de que forma você personaliza suas tags. Vamos conhecer essas estratégias.</p>
+                <ul>
+                        <li>Seletor universal</li>
+                        <p>O seletor universal aplica os atributos escolhidos em todos os elementos da página.</p>
+                        <div class="bloco_codigo">
+                            * {<br>
+                            &nbsp&nbsp&nbsp&nbspbackground-color: blue;<br>
+                            }
+                        </div>
+                    <li>Seletor básico</li>
+                        <p>Escolhendo uma tag como <em>p</em>, por exemplo, você terá todos os parágrafos personalizados da forma especificada.</p>
+                        <div class="bloco_codigo">
+                            p {<br>
+                            &nbsp&nbsp&nbsp&nbspfont-size: 20px;<br>
+                            }
+                        </div>
+                    <li>Seletor múltiplo</li>
+                        <p>Caso você queira personalizar somente aqueles parágrafos que estão dentro de uma <em>div</em>, a qual também está dentro de outra <em>div</em>. Você pode especificar isso usando o seletor múltiplo. Veja:</p>
+                        <div class="bloco_codigo">
+                            div div p {<br>
+                            &nbsp&nbsp&nbsp&nbspfont-family: Verdana;<br>
+                            }
+                        </div>
+                    <li>Aninhamento direto</li>
+                        <p>Outro jeito de selecionar as tags que você quer personalizar é usando a lógica do aninhamento direto. Se eu digo que eu quero personalizar somente os parágrafos que são diretamente aninhados em uma div e ignorar os parágrafos que estão dentro de uma lista, que estão dentro de uma div, por exemplo, eu posso. Veja só:</p>
+                        <div class="bloco_codigo">
+                            div > p {<br>
+                            &nbsp&nbsp&nbsp&nbspcolor: #7AC5CD;<br>
+                            }
+                        </div>       
+                    <li>Classes</li>                 
+                        <p>Classes são úteis quando você tem um monte de elementos onde todos devem receber o mesmo estilo. Ao invés de aplicar as mesmas regras a vários seletores, você pode simplesmente aplicar a mesma classe a todos os elementos HTML, em seguida, definir o estilo para essa classe no arquivo CSS.</p>
+                        <div class="bloco_codigo">
+                            .fancy {<br>
+                            &nbsp&nbsp&nbsp&nbspfont-family: Cursive;<br>
+                            &nbsp&nbsp&nbsp&nbspcolor: #0000CD;<br>
+                            }
+                        </div>       
+                        <div class="bloco_codigo">
+                            &ltp class="fancy"&gtExemplo&lt/p&gt<br>
+                            &lth3 class="fancy"&gtExemplo&lt/h3&gt
+                        </div>        
+                    <li>IDs</li>             
+                        <p>IDs, por outro lado, são ótimos quando você tem exatamente um elemento que deve receber um certo tipo de estilo.</p>
+                        <div class="bloco_codigo">
+                            #fancy {<br>
+                            &nbsp&nbsp&nbsp&nbspfont-family: Cursive;<br>
+                            }
+                        </div>       
+                        <div class="bloco_codigo">
+                            &ltp id="fancy"&gtExemplo&lt/p&gt<br>
+                        </div>  
+                </ul>
+
+            <a name="Box-Model"/><h3>Box-Model</h3>
+                <p>O Box-Model representa as camadas em que todos os elementos da sua página (inclusive ela mesma) são divididos. São essas o <em>Content</em>, <em>Padding</em>, <em>Border</em> e <em>Margin</em>. 
+                <div style=" width: 718px; height: 430px; background-image: url(box.jpg); margin: auto"></div>                 
+                <ul>
+                    <li><em>Content</em></li>
+                        <p>O <em>content</em> é o "material" real na caixa. Se estamos a falar de um elemento &ltp&gt, o "material" é o texto do parágrafo.</p>
+                    <li><em>Padding</em></li>
+                        <p>O <em>padding</em> é o espaçamento entre o conteúdo e a fronteira. Podemos ajustar este valor com CSS para mover a fronteira para mais perto ou mais longe do conteúdo.</p>
+                    <li><em>Border</em></li>
+                        <p>O <em>border</em> é a borda do elemento. É o que temos visto se tornar visível cada vez que defininimos as propriedades da borda.</p>
+                    <li><em>Margin</em></li>
+                        <p>O <em>margin</em> é o espaço em torno do elemento. Quanto maior a margem, mais espaço entre o nosso elemento e os elementos em torno dele. Podemos ajustar a margem para mover os elementos de HTML para mais perto ou mais longe do outro.</p>
+                </ul>
+        <footer style="border: 3px solid black; padding-left: 10px"><a name="bibliografica"/> 
+            <p>Desenvolvido por: Marcelo Medeiros de Lima</p>  
+                <p>Contato:   
+                <a href="mailto:marcelolima381@gmail.com">marcelolima381@gmail.com</a>.  
+            </p>
+        </footer>       
+    </body>
+</html>
