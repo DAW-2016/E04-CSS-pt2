@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Aula - 4</title>
+    	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    
+    <body style="background-color:#cefdce">
+		    <body style="background-color:#cefdce">
+    	<div class="SupraTitulo">
+        <a name="topo"/><p>Manual de referências para CSS</p>
+		</div>
+        
+        <div id="indice">
+		<p class="titulo"><ins>Índice</ins></p>
+				<a class="link" href="#topo">Topo</a><br/><br/>
+                <a class="link" href="#sel">Seletores</a><br/><br/>
+				<a class="link" href="#box">Box model</a><br/><br/>
+        </div>
+        
+    	<div class="bodyCenter"><a name="Sel"/><p class="titulo">Seletores</p>
+        	<p>Os seletores CSS são formas de nós personalizarmos as tags html utilizadas por nós na construção da página. Abaixo há exemplos dos seletores.</p>
+                <ul>
+                        <li>Seletor universal</li>
+                        <p>O seletor universal aplica os atributos escolhidos em todos os elementos da página. Perceba que o seletor é o asterisco.</p>
+                        <div class="exemplo"><code>
+                        *{<br>
+                            &nbsp&nbsp&nbsp&nbspbackground-color: blue;<br>
+                            &nbsp&nbsp&nbsp&nbsp}
+                            </code>
+                        </div>
+                        <br><br>
+                    <li>Seletor básico</li>
+                        <p>Escolhendo uma tag como <code>h1</code>, por exemplo, todos os títulos da tag <code>h1</code> serão todos modificados.</p>
+                        <div class="exemplo"><code>
+                            p{<br>
+                            &nbsp&nbsp&nbsp&nbspfont-size: 20px;<br>
+                            &nbsp&nbsp&nbsp&nbsp}
+                            </code>
+                        </div>
+					<br><br>
+                    <li>Seletor múltiplo</li>
+                        <p>Caso você queira personalizar somente aqueles parágrafos que estão de uma <code>div</code> dentro de outra
+                        <code>div</code>. Usando o seletor múltiplo você consegue definir assim:</p>
+                        <div class="exemplo"><code>
+                            div div p {<br>
+                            &nbsp&nbsp&nbsp&nbspfont-family: Verdana;<br>
+                            &nbsp&nbsp&nbsp&nbsp}
+                            </code>
+                        </div>
+                        <br><br>
+                    <li>Aninhamento direto</li>
+                        <p>Outro jeito de selecionar as tags que você quer personalizar é usando a lógica do aninhamento direto. Se eu digo que eu quero personalizar somente os parágrafos que são diretamente aninhados em uma div e ignorar os parágrafos que estão dentro de uma lista, que estão dentro de uma div, por exemplo, eu posso. Veja só:</p>
+                        <div class="exemplo"><code>
+                            div > p {<br>
+                            &nbsp&nbsp&nbsp&nbspcolor: #7AC5CD;<br>
+                            }
+                            </code>
+                        </div>  
+                        <br><br>     
+                    <li>Classes</li>                 
+                        <p>Classes são úteis quando você tem um monte de elementos onde todos devem receber o mesmo estilo. Ao invés de aplicar as mesmas regras a vários seletores, você pode simplesmente aplicar a mesma classe a todos os elementos HTML, em seguida, definir o estilo para essa classe no arquivo CSS.</p>
+                        <div class="exemplo"><code>
+                            .fancy {<br>
+                            &nbsp&nbsp&nbsp&nbspfont-family: Cursive;<br>
+                            &nbsp&nbsp&nbsp&nbspcolor: #0000CD;<br>
+                            }<br/>
+                            &ltp class="fancy"&gtExemplo&lt/p&gt<br>
+                            &lth3 class="fancy"&gtExemplo&lt/h3&gt
+                        </code>
+                        </div>  
+                        <br><br>      
+                    <li>IDs</li>             
+                        <p>IDs, por outro lado, são ótimos quando você tem exatamente um elemento que deve receber um certo tipo de estilo.</p>
+                        <div class="exemplo"><code>
+                            #fancy {<br>
+                            &nbsp&nbsp&nbsp&nbspfont-family: Cursive;<br>
+                            }<br />      
+                            &ltp id="fancy"&gtExemplo&lt/p&gt<br>
+                           </code>
+                        </div>
+                </ul>
+        </div>
+
+    	<div class="bodyCenter"><a name="box"/><p class="titulo">Box model</p>
+        <p>O box model representa o modelo de caixa (literalmente) da página, isto é, como os vários container se organizam em quatro camadas. São essas o <code>Content</code>, <code>Padding</code>, <code>Border</code> e <code>Margin</code>. 
+                <div style=" width: 380px; height: 340px; background-image: url(box.png); margin: auto"></div>
+                <p><code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspContent</code></p>
+                <p>&nbsp&nbsp&nbsp&nbspO <code>content</code> é o "material" real na caixa. Se estamos a falar de um elemento &ltp&gt, o "material" é o texto do parágrafo.</p>
+                <br>
+                <p><code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPadding</code><p>
+                <p>&nbsp&nbsp&nbsp&nbspO <code>padding</code> é o espaçamento entre o conteúdo e a fronteira. Podemos ajustar este valor com CSS para mover a fronteira para mais perto ou mais longe do conteúdo.</p>
+               	<br>
+                <p><code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBorder</code></p>
+                <p>&nbsp&nbsp&nbsp&nbspO <code>border</code> é a borda do elemento. É o que temos visto se tornar visível cada vez que defininimos as propriedades da borda.</p>
+                <br>
+                <p><code>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMargin</code></p>
+                <p>&nbsp&nbsp&nbsp&nbspO <code>margin</code> é o espaço em torno do elemento. Quanto maior a margem, mais espaço entre o nosso elemento e os elementos em torno dele. Podemos ajustar a margem para mover os elementos de HTML para mais perto ou mais longe do outro.</p>
+        </div>
+        
+    	<div class="footBar">
+       		<strong>Desenvolvedor</strong>: Alan Borges Martins Bispo.<br/>
+            <strong>GitHub</strong>: abmBispo.
+        </div>
+
+    </body>
+
+</html>
