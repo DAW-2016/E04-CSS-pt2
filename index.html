@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+    <title>Seletores e Box-Model</title>
+  </head>
+  <body>
+
+    <header id="cabecalho">
+
+        <h1>CSS: Box-Model e Seletores</h1>
+
+        <div id="indice">
+            <h3>Indice:</h3>
+            <ul>
+                <li>
+                    <a href="#box-model">Box-Model</a>
+                </li>
+                <li>
+                    <a href="#seletores">Seletores</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="materia">
+
+        <div id="box-model">
+            <h2>Box Model</h2>
+            <p>
+                Todo elemento em HTML pode ser visualizado como uma caixa, sendo o papel do navegador empilhar essas caixa para criar a estrutura da página. Essas caixas podem ser customizadas em relação a espaçamento, bordas e etc. Este modelo construção recebe o nome de box model.
+            </p>
+
+            <p>A quatro propriedades ligadas ao box model:</p>
+            <nav>
+              <ul>
+                  <li>
+                      <a href="#margin">Margin</a>
+                  </li>
+                  <li>
+                      <a href="#border">Border</a>
+                  </li>
+                  <li>
+                      <a href="#padding">Padding</a>
+                  </li>
+                  <li>
+                      <a href="#width_height">Width e   height</a>
+                  </li>
+              </ul>
+            </nav>
+              <img src="imagens/box-model.png"/>
+
+              <h3 id="margin">Margin</h3>
+              <p>As propriedades de margem CSS definir o tamanho do espaço em branco fora da borda.</p>
+              <p>Exemplos de codigo:</p>
+
+              <div class="codigo">
+                <code>
+                    .codigo{</br>
+                      &nbsp;&nbsp;&nbsp;margin-top: 20px;</br>
+                      &nbsp;&nbsp;&nbsp;margin-bottom: 20px;</br>
+                      &nbsp;&nbsp;&nbsp;margin-right: 20px;</br>
+                      &nbsp;&nbsp;&nbsp;margin-left: 20px;</br>
+                      /*Ou voce pode fazer: margin: 20px 20px 20px 20px;*/<br/>
+                    }
+                </code>
+              </div>
+
+              <h3 id="border">Border</h3>
+              <p>
+                A fronteira propriedade estenográfica define todas as propriedades da borda em
+                 uma declaração. As propriedades que podem ser definidas, são (em ordem): border-width,
+                 border-style e border-color. Não importa se um dos valores acima estiver faltando, por
+                 exemplo, border: # ff0000 sólidos; é permitido.
+               </p>
+               <p>Exemplos de codigo:</p>
+               <div class="codigo">
+                 <code>
+                   .codigo{</br>
+                     &nbsp;&nbsp;&nbsp;border: 1px solid black;<br/>
+                   }
+                 </code>
+               </div>
+
+               <h3 id="padding">Padding</h3>
+               <p>
+                 The CSS padding properties define the white space between the element content and the element border. The padding clears an area around the content (inside the border) of an element.
+               </p>
+               <p>Exemplos de codigo</p>
+               <div class="codigo">
+                 <code>
+
+                     .codigo{</br>
+                       &nbsp;&nbsp;&nbsp;padding: 20px;<br/>
+                     }
+                 </code>
+               </div>
+
+               <h3 id="width_height">Wideth e height</h3>
+               <p>
+                 A propriedade height define a altura de um elemento e widht a propriedade que define a largura de um elemento.
+               </p>
+               <div class="codigo">
+                <code>
+                  .codigo{</br>
+                    &nbsp;&nbsp;&nbsp;widht : 20px;<br/>
+                    &nbsp;&nbsp;&nbsp;height: 20px;<br/>
+                  }
+                </code>
+               </div>
+
+        </div>
+        <div id="seletores">
+          <h2>Seletores</h2>
+          <p>
+            Os seletores CSS são ferramentas que fornecem meios de estilização de elementos. Há varios modos de seleção:
+          </p>
+          <ul>
+            <li>Todos os elementos</li>
+            <li>Grupos de elementos</li>
+            <li>Elementos que possuem determinado atributo</li>
+            <li>Etc, etc...</li>
+          </ul>
+
+          <h3 id="elementos">Selecionando por Elementos</h3>
+          <p>
+            Modo basico de seleção.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              h1{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+
+            </code>
+          </div>
+          <h3 id="ids">Selecionando por id</h3>
+          <p>
+            Utilizado para estilizar um elemento em específicona página.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              #teste{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="classS">Selecionando por classes</h3>
+          <p>
+            Utilizado para estilizar um grupo específico de elementos na página
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              .wad{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="gruposDeElementos">Selecionando um grupo de elementos</h3>
+          <p>
+            Permite estilizar vários elementos distintos.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              h1, h2, p{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="seletoreUniversal">Universal</h3>
+          <p>
+            Estiliza todos elementos da pagina
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              *{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="descendentes">Descendentes</h3>
+          <p>
+            Permite estilizar elementos combase na hierarquiada página.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              .codigo p{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="filhos">Filhos</h3>
+          <p>
+            Estiliza elementos quesão filhos de um determinado elemento.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              body > p{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="adjacentes">Adjacentes</h3>
+          <p>
+            Estiliza elementos vizinhos entre si.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              h3+ul{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="pseudoSeletoresLink">Pseudo Seletores Link</h3>
+          <p>
+            Seletores que são ativos em determinadas ações.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              a:link{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }<br/>
+              a:visited{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }<br/>
+              a:hover{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }<br/>
+              a:active{</br>
+                &nbsp;&nbsp;&nbsp;color:red<br/>
+                &nbsp;&nbsp;&nbsp;font-family:Arial;<br/>
+              }
+            </code>
+          </div>
+          <h3 id="pseudoSeletoresParagrafos">Pseudo Seletores Paragrafos</h3>
+          <p>
+            Aplica estilos na primeira letra do paragrafo ou na primeira linha.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              p:first-letter{<br/>
+                &nbsp;&nbsp;&nbsp;font-size:15px;<br/>
+              }<br/>
+              p:first-line{<br/>
+                &nbsp;&nbsp;&nbsp;font-size:20px;
+              }
+            </code>
+          </div>
+          <h3 id="pseudoSeletoresBeforeAfter">Pseudo Seletores Before After</h3>
+          <p>
+            Adiciona conteúdo antes e depois do elemento.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              h1:after{<br/>
+                &nbsp;&nbsp;&nbsp;font-size:15px;<br/>
+              }<br/>
+              h1:before{<br/>
+                &nbsp;&nbsp;&nbsp;font-size:15px;<br/>
+              }<br/>
+            </code>
+          </div>
+          <h3 id="pseudoSeletoresPrimeiroFilho">Pseudo Seletores Primeiro Filho</h3>
+          <p>
+            Estiliza o primeiro filho de um determinado elemento.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              body:first-child{<br/>
+                &nbsp;&nbsp;&nbsp;font-size:15px;<br/>
+              }<br/>
+            </code>
+          </div>
+          <h3 id="pseudoSeletoresFocus">Pseudo seletores focus</h3>
+          <p>
+            Estiliza um elemento quando ele ganha destaque na página(click,tabbing).
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              input:focus{<br/>
+                &nbsp;&nbsp;&nbsp;font-size:15px;<br/>
+              }<br/>
+            </code>
+          </div>
+          <h3 id="atributos">Atributos</h3>
+          <p>
+            Permite que os elementos a serem estilizados sejam selecionados por meio de seus atributos.
+          </p>
+          <p>
+            Exemplo de codigo:
+          </p>
+          <div class="codigo">
+            <code>
+              a[href$=".pdf"]{<br/>
+                &nbsp;&nbsp;&nbsp;font-size:15px;<br/>
+              }<br/>
+            </code>
+          </div>
+
+
+        </div>
+    </div>
+
+  </body>
+</html>

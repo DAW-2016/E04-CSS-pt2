@@ -1,0 +1,38 @@
+
+*{
+  /*border: 2px dashed blue;*/
+}
+body{
+
+}
+
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+
+    font-size: large;
+}
+
+#cabecalho h1{
+
+
+    text-align: center;
+}
+
+.codigo{
+
+  padding: 20px;
+  text-align: justify;
+  border: 1px solid black;
+  margin: 20px 20px 20px 20px;
+
+}

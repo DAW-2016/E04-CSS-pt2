@@ -1,0 +1,139 @@
+.daw{
+    
+    display: inline;
+}
+
+#flo{
+    background-color: brown;
+    float: right;
+    width: 50px;
+    height: 50px;
+}
+#absolute{
+    
+    position: absolute;
+    left: 80px;
+    width: 200px;
+    height: 120px;
+    border: 3px solid #8AC007;
+}
+
+#abs{
+    
+    position: absolute;
+    right: 20px;
+    width: 200px;
+    height: 120px;
+    border: 3px solid #8AC007;
+}
+#ab{
+    position: absolute;
+    
+}
+
+#maxwi{
+
+    max-width: 100px;
+    background-color: yellow;
+}
+
+#marx{
+
+    max-height: 50px;
+    background-color: yellow;
+    overflow: auto;
+}
+
+#hei{
+    
+    background-color: red;
+    height: 400px;
+    width: 400px;
+}
+
+#heig{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+}
+
+#backcolor{
+    
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+}   
+
+#backimage{
+    background-image: url(sindrome-pato.jpg);
+    width:400px;
+    height:437px;
+}
+
+#fofamily{
+    
+    font-family: Arial;
+}
+
+#fostyle{
+    
+    font-style: italic;
+}
+
+#fosize{
+    
+    font-size: 24px;
+}
+
+
+#borstyledashed{
+    
+    border-style: dashed;
+    width: 50px;
+    height: 50px;
+}
+
+#borstylesoli{
+    
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+}
+
+#borwidth{
+    
+    border-width: 15px;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+}
+
+#pmargin{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+#one {
+    border: 1px solid red;
+    background-color: yellow;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+#co{
+    color: blue;
+}
+
+#op{
+    opacity: 0.3;
+    background-color: yellow;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+
+}
