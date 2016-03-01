@@ -1,0 +1,39 @@
+body{
+
+}
+
+p{
+    text-align: justify;
+}
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+
+    font-size: large;
+}
+
+#cabecalho h1{
+
+
+    text-align: center;
+}
+
+#indice{
+
+    border: 2px solid black;
+    width: 200px;
+    height: 100px;
+}
+
+#box-model img{
+
+}
+
+.materia{
+
+}
