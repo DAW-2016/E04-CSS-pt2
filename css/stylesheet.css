@@ -1,9 +1,14 @@
+
+*{
+  /*border: 2px dashed blue;*/
+}
 body{
 
 }
 
 p{
     text-align: justify;
+    text-indent: 50px;
 }
 
 a{
@@ -23,17 +28,11 @@ a:hover{
     text-align: center;
 }
 
-#indice{
+.codigo{
 
-    border: 2px solid black;
-    width: 200px;
-    height: 100px;
-}
-
-#box-model img{
-
-}
-
-.materia{
+  padding: 20px;
+  text-align: justify;
+  border: 1px solid black;
+  margin: 20px 20px 20px 20px;
 
 }
